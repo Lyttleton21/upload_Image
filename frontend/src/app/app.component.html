@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink="/uploader">Uploader</a>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <ng-container *ngFor="let img of _image">
+        <img src="data:{{img.filetype}};base64, {{img.data}}" [alt]="img.filename" class="img-thumbnail">
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<!-- <div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <ng-container ></ng-container>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<router-outlet></router-outlet>
